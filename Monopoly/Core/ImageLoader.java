@@ -9,14 +9,15 @@ import javax.imageio.ImageIO;
 
 public class ImageLoader {
     public class Images{
-        public static BufferedImage smiley = null;
+        public static BufferedImage board = null;
     
     }
 
     public static void loadImages(){
         try {
-            Images.smiley = ImageIO.read(new File("Images/smiley.png"));
+            Images.board = ImageIO.read(new File("Images/board.jpg"));
         } catch (IOException e) {
+            System.out.println("Failed to load image");
         }
     }
 }

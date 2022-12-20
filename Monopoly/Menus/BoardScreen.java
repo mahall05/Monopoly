@@ -2,6 +2,7 @@ package Menus;
 
 import Core.Constants;
 import Core.ImageLoader;
+import java.awt.image.BufferedImage;
 
 import java.awt.*;
 
@@ -30,9 +31,11 @@ public class BoardScreen{
     }
 
     public void render(Graphics g){
+        BufferedImage board = ImageLoader.Images.board;
+
         g.setColor(Color.black);
         g.fillRect(0, 0, Constants.WIDTH, Constants.HEIGHT);
-        g.drawImage(ImageLoader.Images.smiley, 0, 0, null);
+        g.drawImage(board, Constants.WIDTH/2 - board.getWidth()/2, Constants.HEIGHT/2 - board.getHeight()/2, null);
 
         /*
         g.setColor(Color.black);
