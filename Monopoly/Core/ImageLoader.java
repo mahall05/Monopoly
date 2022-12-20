@@ -10,13 +10,12 @@ import javax.imageio.ImageIO;
 public class ImageLoader {
     public class Images{
         public static BufferedImage smiley = null;
+    
     }
 
     public static void loadImages(){
-        //BufferedImage img = null;
-        
         try {
-            Images.smiley = ImageIO.read(new File("Core/Images/smiley.png"));
+            Images.smiley = ImageIO.read(new File("Images/smiley.png"));
         } catch (IOException e) {
         }
     }
